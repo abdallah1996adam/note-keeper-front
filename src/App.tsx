@@ -1,18 +1,17 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Home } from "./pages";
+import { Notes, LandingPage } from "./pages";
 import { Header, Footer } from "./components";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main style={{ minHeight: "93vh" }}>
-        <Routes>
-          <Route path="/"  element={<Home />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
